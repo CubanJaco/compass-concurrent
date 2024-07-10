@@ -77,4 +77,7 @@ dependencies {
     // Moshi
     implementation(libs.moshi)
     ksp(libs.moshi.codegen)
+
+    // Tools
+    implementation(libs.kotlinx.collections)
 }

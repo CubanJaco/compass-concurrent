@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">Compass Concurrent</string>
+
+    <string name="refresh">Refresh</string>
+    <string name="error_message">Ups! Something bad happened. Please try to refresh again</string>
+    <string name="no_words_yet">No word counts yet</string>
+    <plurals name="word_count">
+        <item quantity="one">There are %d word</item>
+        <item quantity="other">There are %d words</item>
+    </plurals>
 </resources>

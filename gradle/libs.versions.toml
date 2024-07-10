@@ -15,6 +15,7 @@ retrofit = "2.11.0"
 [libraries]
 androidx-activity-compose = { group = "androidx.activity", name = "activity-compose", version.ref = "activityCompose" }
 androidx-compose-bom = { group = "androidx.compose", name = "compose-bom", version.ref = "composeBom" }
+androidx-compose-material3 = { group = "androidx.compose.material3", name = "material3" }
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
 androidx-datastore-preferences = { group = "androidx.datastore", name = "datastore-preferences", version.ref = "datastore" }
 androidx-lifecycle-runtime-compose = { group = "androidx.lifecycle", name = "lifecycle-runtime-compose", version.ref = "lifecycleCompose" }
@@ -36,6 +37,8 @@ retrofit-converter-moshi = { group = "com.squareup.retrofit2", name = "converter
 moshi = { group = "com.squareup.moshi", name = "moshi-kotlin", version.ref = "moshi" }
 moshi-codegen = { group = "com.squareup.moshi", name = "moshi-kotlin-codegen", version.ref = "moshi" }
 
+kotlinx-collections = { module = "org.jetbrains.kotlinx:kotlinx-collections-immutable", version = "0.3.5" }
+
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
 hilt-android = { id = "com.google.dagger.hilt.android", version.ref = "hilt" }
@@ -46,8 +49,9 @@ kotlin-ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
 [bundles]
 compose = [
     "androidx-activity-compose",
-    "androidx-lifecycle-viewmodel-compose",
+    "androidx-compose-material3",
     "androidx-lifecycle-runtime-compose",
+    "androidx-lifecycle-viewmodel-compose",
 ]
 retrofit = [
     "retrofit",
