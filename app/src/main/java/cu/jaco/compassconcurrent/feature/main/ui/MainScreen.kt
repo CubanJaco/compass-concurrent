@@ -34,6 +34,7 @@ import cu.jaco.compassconcurrent.feature.main.MainViewModel
 import cu.jaco.compassconcurrent.feature.main.ui.states.ScreenState
 import cu.jaco.compassconcurrent.ui.theme.CompassConcurrentTheme
 import cu.jaco.compassconcurrent.ui.theme.Space16
+import cu.jaco.compassconcurrent.ui.theme.Space32
 import cu.jaco.compassconcurrent.ui.theme.Space8
 import kotlinx.collections.immutable.ImmutableList
 
@@ -113,7 +114,7 @@ private fun Content(
     modifier: Modifier = Modifier,
 ) {
     LazyVerticalGrid(
-        columns = GridCells.Adaptive(minSize = 32.dp),
+        columns = GridCells.Adaptive(minSize = Space32),
         contentPadding = PaddingValues(Space16),
         verticalArrangement = Arrangement.spacedBy(Space8),
         horizontalArrangement = Arrangement.spacedBy(Space8),
@@ -138,6 +139,7 @@ private fun Content(
                         .align(Alignment.CenterHorizontally)
                         .padding(Space8),
                     textAlign = TextAlign.Center,
+                    maxLines = 1,
                 )
             }
         }

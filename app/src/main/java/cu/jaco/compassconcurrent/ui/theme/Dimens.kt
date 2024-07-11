@@ -4,3 +4,4 @@ import androidx.compose.ui.unit.dp
 
 val Space8 = 8.dp
 val Space16 = 16.dp
+val Space32 = 32.dp
