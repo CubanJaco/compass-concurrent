@@ -1,25 +1,14 @@
 package cu.jaco.compassconcurrent.feature.main.usecases
 
-import cu.jaco.compassconcurrent.feature.main.repositories.AboutRepository
-import kotlinx.collections.immutable.toImmutableList
-import javax.inject.Inject
+import kotlinx.collections.immutable.ImmutableList
+import kotlinx.coroutines.flow.Flow
 
-class MainUseCase @Inject constructor(
-    private val aboutRepository: AboutRepository,
-) {
-    suspend fun refreshWordCount() {
-        val aboutInfo = aboutRepository.fetchAboutInfo()
-        val wordCount = aboutInfo.split("\\s+".toRegex()).size
-        aboutRepository.setWordCount(wordCount)
-    }
+interface MainUseCase {
+    suspend fun refreshWordCount()
 
-    suspend fun refreshEvery10thCharacter() {
-        val aboutInfo = aboutRepository.fetchAboutInfo()
-        val every10thCharacter = aboutInfo.filterIndexed { index, _ -> index % 10 == 0 }
-        aboutRepository.setEvery10thCharacterList(every10thCharacter.toList().toImmutableList())
-    }
+    suspend fun refreshEvery10thCharacter()
 
-    fun getWordCount() = aboutRepository.getWordCount()
+    fun getWordCount(): Flow<Int>
 
-    fun getEvery10thCharacter() = aboutRepository.getEvery10thCharacter()
+    fun getEvery10thCharacter(): Flow<ImmutableList<Char>>
 }

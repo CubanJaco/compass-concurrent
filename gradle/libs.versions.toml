@@ -6,7 +6,7 @@ coreKtx = "1.10.1"
 datastore = "1.0.0"
 hilt = "2.48"
 kotlin = "1.9.0"
-ksp="1.9.0-1.0.11"
+ksp = "1.9.0-1.0.11"
 lifecycleCompose = "2.7.0"
 lifecycleRuntimeKtx = "2.6.1"
 moshi = "1.15.1"
@@ -37,7 +37,13 @@ retrofit-converter-scalars = { group = "com.squareup.retrofit2", name = "convert
 moshi = { group = "com.squareup.moshi", name = "moshi-kotlin", version.ref = "moshi" }
 moshi-codegen = { group = "com.squareup.moshi", name = "moshi-kotlin-codegen", version.ref = "moshi" }
 
-kotlinx-collections = { module = "org.jetbrains.kotlinx:kotlinx-collections-immutable", version = "0.3.5" }
+kotlinx-collections = { group = "org.jetbrains.kotlinx", name = "kotlinx-collections-immutable", version = "0.3.5" }
+kotlinx-coroutines-test = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-test", version = "1.7.1" }
+
+junit = { group = "junit", name = "junit", version = "4.13.2" }
+mockk = { group = "io.mockk", name = "mockk", version = "1.13.2" }
+turbine = { group = "app.cash.turbine", name = "turbine", version = "0.12.1" }
+hamcrest = { group = "org.hamcrest", name = "hamcrest", version = "2.2" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }

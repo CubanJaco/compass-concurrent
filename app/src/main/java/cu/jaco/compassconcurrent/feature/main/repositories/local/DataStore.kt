@@ -54,7 +54,7 @@ class DataStore @Inject constructor(
     }
 
     val wordCount: Flow<Int> = dataStore.data
-//        .catchIOException()
+        .catchIOException()
         .map { preferences ->
             preferences[PreferencesKeys.WORDS_COUNT]?.toIntOrNull() ?: 0
         }
@@ -64,7 +64,7 @@ class DataStore @Inject constructor(
     }
 
     val every10thCharacterList: Flow<ImmutableList<Char>> = dataStore.data
-//        .catchIOException()
+        .catchIOException()
         .map { preferences ->
             val json = preferences[PreferencesKeys.EVERY_10TH_CHARACTER] ?: return@map persistentListOf()
             listAdapter.fromJson(json) ?: persistentListOf()

@@ -80,4 +80,11 @@ dependencies {
 
     // Tools
     implementation(libs.kotlinx.collections)
+
+    // Tests
+    testImplementation(libs.junit)
+    testImplementation(libs.kotlinx.coroutines.test)
+    testImplementation(libs.mockk)
+    testImplementation(libs.hamcrest)
+    testImplementation(libs.turbine)
 }
